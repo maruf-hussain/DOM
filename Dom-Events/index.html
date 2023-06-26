@@ -9,10 +9,39 @@
   <h1>Dom Events</h1>
 <button ondblclick="console.log(2)">On Click</button>
 <button onclick="redButton()">Red Button</button>
-<button id="green-button" onclick="">Green Button</button>
+<button id="green-button">Green Button</button>
 <button id="yellow-button">Yelle Button</button>
+<button id="blue-button">Blue Button</button>
+<h3 id="handle-simple">defalt text</h3>
+<button onclick="simpleMan()">I am a simle man</button>
+<button id="even-lisener">it is even listener</button>
 
+<p id="change-text">defalt text</p>
+<input id="input-feild" type="text"<br/>
+<button id="hange-button">change input feild</button>
 
+<script>
+document.getElementById('hange-button').addEventListener('click', function(){
+  const inputField = document.getElementById('input-feild');
+  const inputText = inputField.value;
+
+  const p = document.getElementById('change-text');
+  p.innerText = inputText;
+  inputField.value = '';
+
+})
+
+  function simpleMan(){
+    const handleSimple = document.getElementById('handle-simple');
+    handleSimple.innerText = 'o o simple man is right';
+
+  }
+
+  document.getElementById('even-lisener').addEventListener('click', function(){
+    const handeleEven = document.getElementById('handle-simple');
+    handeleEven.innerText = 'it is even lisener oo simple man';
+  })
+</script>
   <script src="event.js"></script>
 </body>
 </html>

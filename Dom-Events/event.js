@@ -13,3 +13,7 @@ const yellowButton = document.getElementById('yellow-button');
 yellowButton.addEventListener('click', function(){
   document.body.style.backgroundColor = 'yellow';
 })
+
+document.getElementById('blue-button').addEventListener('click', function(){
+  document.body.style.backgroundColor = 'blue';
+})
