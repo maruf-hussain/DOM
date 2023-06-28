@@ -16,7 +16,9 @@
       if(text === 'delete'){
         deleteButton.removeAttribute('disabled')
       }
-    })
+      else{
+        deleteButton.setAttribute('disabled', true);
+      }    })
     document.getElementById('delete-button').addEventListener('click', function(){
       const secret = document.getElementById('sectet-info');
       secret.style.display = 'none'
