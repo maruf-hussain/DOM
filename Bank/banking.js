@@ -10,17 +10,23 @@ const newDepositTotalText = parseFloat(depositTotalText);
 const currentDepositTotal = newDepositText + newDepositTotalText;
 depositTotal.innerText = currentDepositTotal;
 
+
+
+// .............update balance.................//
+const balance = document.getElementById('balance');
+const balanceTotalString = balance.innerText;
+const balanceTotal = parseFloat(balanceTotalString);
+
+const currentBalanceTotal = balanceTotal + newDepositText;
+balance.innerText = currentBalanceTotal;
+
 deposit.value = '';
 
 
 })
 
-// .............update balance.................//
-
-
-    
-
-
 // ...............withdraw part....................//
 
-
+document.getElementById('withdraw-button').addEventListener('click', function(){
+  const withdraw
+})
