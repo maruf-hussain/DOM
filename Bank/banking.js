@@ -28,5 +28,28 @@ deposit.value = '';
 // ...............withdraw part....................//
 
 document.getElementById('withdraw-button').addEventListener('click', function(){
-  const withdraw
+  const withdraw = document.getElementById('withdraw-amount');
+  const withdrawString = withdraw.value;
+  const withdrawTotalAmount = parseFloat(withdrawString);
+ 
+  const withdrawTotal = document.getElementById('withdraw');
+  const withdrawTotalText = withdrawTotal.innerText;
+  const withdrawTotalString = parseFloat(withdrawTotalText);
+  const currentWithdraw = withdrawTotalString + withdrawTotalAmount;
+  withdrawTotal.innerText = currentWithdraw;
+
+
+  // .............update balance afete withdraw.................//
+const withdrawBalance = document.getElementById('balance');
+const withdrawTotalStringBalance = withdrawBalance.innerText;
+const withdrawTotalBalance = parseFloat(withdrawTotalStringBalance);
+const currentWithdrawBalance =  withdrawTotalBalance - withdrawTotalAmount;
+withdrawBalance.innerText = currentWithdrawBalance; 
+if(currentWithdrawBalance < currentBalanceTotal){
+  alert('balance emty');
+}
+
+withdraw.value = '';
+
+
 })
